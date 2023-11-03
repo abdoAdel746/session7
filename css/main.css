@@ -1,0 +1,995 @@
+:root {
+    --violet: #8B5CF6;
+    --grey: #EAEDF1
+}
+
+* {
+    text-transform: capitalize;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    font-family: sans-serif
+}
+
+body {
+    background: #f1f5f9
+}
+
+nav {
+    width: 20%;
+    background: #fff;
+    border-right: 2px solid #0000001a;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden
+}
+
+nav .left {
+    grid-column: 1;
+    display: grid;
+    border-right: 1px solid #0000001a;
+    padding: 18px 0;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr)
+}
+
+nav .left::after {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background: #000;
+    left: 28%;
+    top: 0
+}
+
+nav .left .up {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    align-self: self-start
+}
+
+nav .left .up .logo {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border: 10px solid var(--violet);
+    border-radius: 50%
+}
+
+.up .logo::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    top: -17px;
+    left: 11px;
+    border: 4px solid #fff;
+    background: var(--violet);
+    border-radius: 50%
+}
+
+.up i:first-of-type {
+    background: #ede9fe
+}
+
+.up i {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 9px;
+    color: #353d48b0
+}
+
+.up img {
+    width: 20px
+}
+
+.down {
+    display: grid;
+    gap: 8px;
+    align-self: self-end;
+    justify-self: center;
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center
+}
+
+.down .useraccount {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%
+}
+
+.down i {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 9px;
+    color: #353d48b0
+}
+
+.down img {
+    width: 20px
+}
+
+.right {
+    margin: 20px 0;
+    grid-column: 2/4
+}
+
+.right h1 {
+    font-size: 14px;
+    font-weight: 100;
+    font-family: monospace
+}
+
+.right ul:first-of-type {
+    list-style: none
+}
+
+.right ul:first-of-type li {
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center
+}
+
+.right .list_drop li {
+    grid-template-columns: repeat(7, 1fr) !important
+}
+
+.right .list_drop img {
+    width: 20px
+}
+
+.right ul:first-of-type li span {
+    grid-column: 1/3;
+    grid-row: 1;
+    color: #a1a3b8;
+    font-size: 13px
+}
+
+.right ul:first-of-type li i {
+    grid-column: 3;
+    grid-row: 1;
+    color: #a1a3b8;
+    font-size: 13px
+}
+
+.right ul .list3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) !important;
+    position: relative
+}
+
+.right ul .list3::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 5px;
+    height: 5px;
+    top: 5px;
+    left: -10px;
+    background: var(--violet);
+    border-radius: 50%
+}
+
+.right ul .list3 i {
+    grid-column: 5 !important
+}
+
+.right ul .list3 .list_drop {
+    grid-column: 1/6
+}
+
+.right ul .list3 .list_drop i {
+    grid-column: 1 !important;
+    grid-row: 1
+}
+
+.right ul .list3 .list_drop span {
+    grid-column: 2/6;
+    grid-row: 1;
+    font-size: 10px
+}
+
+.right ul .line_up_down {
+    position: relative;
+    margin: 39px auto !important
+}
+
+.right ul .line_up_down::after {
+    content: "";
+    position: absolute;
+    width: 219px;
+    height: 1px;
+    left: -24px;
+    top: 39px;
+    background: #00000029
+}
+
+.right ul .line_up_down::before {
+    content: "";
+    position: absolute;
+    width: 219px;
+    height: 1px;
+    left: -24px;
+    top: -20px;
+    background: #00000029
+}
+
+.grid__system {
+    margin: 0 2% 5% 22%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 68px px 239px 171px 108px 258px;
+    grid-template-areas: "header header header""cards transfer send""cards progress send""cards history history""transactions history history""transactions history history";
+    gap: 12px
+}
+
+.grid__system .header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    font-size: 20px
+}
+
+.grid__system .header .left i:first-child {
+    color: var(--violet);
+    margin-right: 10px
+}
+
+.grid__system .header .right {
+    text-align: end
+}
+
+.grid__system .header .right .icons img:last-of-type {
+    background: 0 0
+}
+
+.grid__system .header .right .icons img {
+    width: 20px
+}
+
+.grid__system .header .right .icons {
+    gap: 14px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    display: inline-grid
+}
+
+.grid__system .header .right .icons i, .grid__system .header .right .icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 4px
+}
+
+.grid__system .cards {
+    grid-area: cards;
+    border: 1px solid var(--grey);
+    background-color: #fff;
+    padding: 0 26px 26px 26px;
+    border-radius: 5px
+}
+
+.grid__system .cards .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    margin: 21px 0
+}
+
+.grid__system .cards .item h1 {
+    font-size: 20px
+}
+
+.grid__system .cards .item i {
+    text-align: right;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--grey);
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-self: self-end
+}
+
+.grid__system .cards .item2 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 14px;
+    margin-bottom: 0
+}
+
+.grid__system .cards .item2::after {
+    content: ""
+}
+
+.grid__system .cards .item2 h2 {
+    font-size: 10px;
+    font-weight: 100;
+    margin-bottom: 6px
+}
+
+.grid__system .cards .item2 h3 {
+    font-size: 11px
+}
+
+.grid__system .cards .item2 .credit__card {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "num type""card card";
+    background: var(--violet);
+    padding: 17px 13px;
+    border-radius: 10px;
+    gap: 12px;
+    font-size: 12px;
+    color: #fff
+}
+
+.grid__system .cards .item2 .credit__card .num {
+    grid-area: num
+}
+
+.grid__system .cards .item2 .credit__card .type {
+    grid-area: type;
+    justify-self: self-end;
+    font-family: FontAwesome;
+    font-size: 10px
+}
+
+.grid__system .cards .item2 .credit__card .card {
+    grid-area: card
+}
+
+.grid__system .cards .item2 .balance h2 {
+    font-size: 10px;
+    font-weight: 100
+}
+
+.grid__system .cards .item2 .balance h3 {
+    font-size: 23px
+}
+
+.grid__system .cards .item2 i {
+    text-align: right;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--grey);
+    border-radius: 50%;
+    grid-column: 4
+}
+
+.grid__system .cards .item span:last-of-type {
+    text-align: right;
+    position: relative
+}
+
+.visa_name span {
+    text-align: left !important
+}
+
+.visa_name::after {
+    content: "";
+    width: 368px;
+    position: absolute;
+    top: 49px;
+    left: -26px;
+    border-bottom: dashed;
+    border-bottom-width: 3px;
+    border-color: var(--grey)
+}
+
+.visa_name div {
+    text-align: right;
+    position: relative
+}
+
+.grid__system .cards .item .circle::before {
+    content: "";
+    position: absolute;
+    right: 49px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #38c237;
+    border-radius: 50%
+}
+
+.grid__system .cards .visa_name {
+    margin-bottom: 50px;
+    position: relative
+}
+
+.grid__system .cards .visa_name div span:first-of-type {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: cursive
+}
+
+.grid__system .transfer {
+    background-color: #faebd7;
+    grid-area: transfer;
+    border: 1px solid var(--grey);
+    background-color: #fff
+}
+
+.grid__system .transfer {
+    padding: 20px;
+    display: grid
+}
+
+.grid__system .transfer h2 {
+    font-size: 15px;
+    margin-bottom: 20px
+}
+
+.grid__system .transfer .input {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0000001c;
+    padding: 10px;
+    position: relative
+}
+
+.grid__system .transfer img {
+    width: 27px;
+    grid-column: 1;
+    height: 27px;
+    border-radius: 50%;
+    margin-right: 5px
+}
+
+.grid__system .transfer span {
+    grid-column: 2/9
+}
+
+.grid__system .transfer i {
+    width: 20px;
+    grid-column: 12;
+    text-align: end
+}
+
+.grid__system .transfer p {
+    font-size: 10px;
+    margin: 15px 0
+}
+
+.grid__system .transfer a {
+    font-size: 12px;
+    text-align: end;
+    color: #8b5cf6;
+    text-decoration: none
+}
+
+.grid__system .transfer .input::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #0000001f;
+    right: 41px
+}
+
+.grid__system .progress {
+    background-color: #ff0;
+    grid-area: progress;
+    border: 1px solid var(--grey);
+    background-color: #fff
+}
+
+.grid__system .progress {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr)
+}
+
+.grid__system .progress .line {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap
+}
+
+.grid__system .progress .line h2 {
+    font-size: 17px
+}
+
+.grid__system .progress .line span {
+    color: #5b5d61;
+    text-align: right
+}
+
+.grid__system .progress .icons {
+    display: flex;
+    grid-template-rows: repeat(1, 1fr);
+    margin: 20px 0
+}
+
+.grid__system .progress .icons img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    align-items: center;
+    margin: 0 4px
+}
+
+.grid__system .progress .icons span:nth-of-type(1) {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #3f51b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    margin: 0 2px;
+    color: #fff
+}
+
+.grid__system .progress .icons span:nth-of-type(2) {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: orange;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    margin: 0 2px
+}
+
+.grid__system .progress h3 {
+    color: #767676;
+    font-size: 13px
+}
+
+.grid__system .progress .input {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0000001c;
+    padding: 10px;
+    position: relative;
+    margin: 20px auto
+}
+
+.grid__system .progress img {
+    width: 27px;
+    grid-column: 1;
+    height: 27px;
+    border-radius: 50%;
+    margin-right: 5px
+}
+
+.grid__system .progress span {
+    font-size: 12px;
+    grid-column: 2/12
+}
+
+.grid__system .progress i {
+    width: 20px;
+    grid-column: 12;
+    text-align: end
+}
+
+.grid__system .progress .input::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #0000001f;
+    right: 41px
+}
+
+.grid__system .progress .cuurenct .up {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr)
+}
+
+.grid__system .progress .cuurenct .up label:first-of-type {
+    grid-column: 1;
+    font-size: 10px
+}
+
+.grid__system .progress .cuurenct .up label:last-of-type {
+    grid-column: 3/8;
+    font-size: 10px
+}
+
+.grid__system .progress .cuurenct .down .drob {
+    grid-column: 1/3;
+    border: 1px solid var(--grey);
+    padding: 0 10px;
+    font-size: 13px;
+    border-radius: 5px
+}
+
+.grid__system .progress .cuurenct .down .drob i {
+    font-size: 10px
+}
+
+.grid__system .progress .cuurenct .down input {
+    padding: 5px;
+    border: 1px solid #dedede;
+    border-radius: 5px
+}
+
+.grid__system .progress .cuurenct .down {
+    display: flex;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    margin: 12px 0;
+    flex-wrap: wrap
+}
+
+.grid__system .progress .btn p {
+    font-size: 10px;
+    color: #8f9093
+}
+
+.grid__system .progress .btn div {
+    background: var(--violet);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 13px;
+    border-radius: 7px
+}
+
+.grid__system .progress {
+    padding: 34px;
+    grid-area: send;
+    border: 1px solid var(--grey);
+    background-color: #fff
+}
+
+.grid__system .send {
+    background-color: #000;
+    grid-area: progress;
+    border: 1px solid var(--grey);
+    background-color: #fff;
+    padding: 20px
+}
+
+.send .head {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 19px
+}
+
+.send span:nth-of-type(1) {
+    font-weight: 700
+}
+
+.send span:nth-of-type(2) {
+    text-align: right
+}
+
+.send .bar {
+    background-color: var(--grey);
+    width: 100%;
+    height: 10px;
+    border-radius: 50px;
+    overflow: hidden
+}
+
+.send .progress__bar {
+    background-color: var(--violet);
+    width: 64%;
+    height: 10px
+}
+
+.send p {
+    font-size: 10px;
+    margin: 17px 0
+}
+
+.send a {
+    width: 100%;
+    text-align: right;
+    display: inline-grid;
+    text-decoration: none
+}
+
+.grid__system .history {
+    padding: 20px;
+    grid-area: history;
+    border: 1px solid var(--grey);
+    background-color: #fff
+}
+
+.grid__system .history .item1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between
+}
+
+.grid__system .history .item1 span:first-of-type {
+    font-weight: 700
+}
+
+.grid__system .history .item1 span:last-of-type {
+    text-align: right
+}
+
+.grid__system .history .item2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 19px
+}
+
+.grid__system .history .item2 span:first-of-type {
+    position: relative;
+    text-align: right;
+    font-size: 13px
+}
+
+.grid__system .history .item2 span:first-of-type::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--violet);
+    bottom: 2px;
+    border-radius: 50%;
+    right: 60px
+}
+
+.grid__system .history .item2 span:last-of-type {
+    position: relative;
+    font-size: 13px
+}
+
+.grid__system .history .item2 span:last-of-type::before {
+    content: "";
+    position: absolute;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    bottom: 2px;
+    border-radius: 50%;
+    left: -13px
+}
+
+.grid__system .history img {
+    width: 100%;
+    height: fit-content
+}
+
+.grid__system .transactions {
+    background-color: green;
+    border: 1px solid var(--grey);
+    background-color: #fff;
+    grid-area: transactions;
+    padding: 20px
+}
+
+.grid__system .transactions .head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.grid__system .transactions .head span {
+    text-align: right
+}
+
+.grid__system .transactions .head h2 {
+    font-size: 15px;
+    font-weight: 700
+}
+
+.grid__system .transactions .item2 h3 {
+    font-size: 11px
+}
+
+.grid__system .transactions .item2 .credit__card {
+    background-color: #d2d4df54;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+
+.grid__system .transactions .item2 .credit__card i {
+    width: 20px;
+    color: #fff
+}
+
+.grid__system .transactions .item2 .credit__card img {
+    width: 20px
+}
+
+.grid__system .transactions .item2 .balance {
+    grid-column: 2/5
+}
+
+.grid__system .transactions .item2 .balance h2 {
+    font-size: 17px;
+    font-weight: 100;
+    font-weight: 700
+}
+
+.grid__system .transactions .item2 .balance h3 {
+    font-size: 10px;
+    font-weight: 100
+}
+
+.grid__system .transactions .item2 span {
+    text-align: right;
+    grid-column: 5/7 !important;
+    font-weight: 700;
+    grid-column: 4
+}
+
+.grid__system .transactions .item2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 14px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center
+}
+
+@media screen and (min-width:300px) and (max-width:1024px) {
+    nav .left {
+        gap: 0 !important;
+
+    }
+
+    nav .left .up .logo {
+        width: 50px;
+        height: 50px;
+        border: 13px solid var(--violet);
+    }
+
+    .down img {
+        width: 40px;
+    }
+
+    .down {
+        gap: 20px;
+    }
+
+    .up {
+        gap: 20px;
+    }
+
+    .up img {
+        width: 40px;
+    }
+
+    .down .useraccount {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav {
+        width: 9%;
+        display: block
+    }
+
+    nav .right {
+        display: none
+    }
+
+    nav .left {
+        border: none;
+        gap: 63%;
+        height: 100%;
+    }
+
+    .grid__system {
+        margin: 0 2% 5% 12%;
+        grid-template-areas: "header""cards""transfer""progress""send""transactions""history";
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-template-columns: auto
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width:1077px) {
+    .grid__system .progress {
+
+        width: 200px;
+    }
+
+    .grid__system .progress .cuurenct .down input {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+    .up img {
+        width: 15px;
+    }
+
+    .grid__system .header .right .icons i {
+        width: 15px;
+        height: 15px;
+    }
+
+    nav .left .up .logo {
+        width: 15px;
+        height: 15px;
+        border: 5px solid var(--violet);
+    }
+
+    .down img {
+        width: 15px;
+    }
+
+    .down .useraccount {
+        width: 15px;
+        height: 15px;
+    }
+
+    nav {
+        width: 14%;
+    }
+
+    .up .logo::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        width: 7px;
+        height: 7px;
+        top: -9px;
+        left: 3px;
+        border: 3px solid #fff;
+        background: var(--violet);
+        border-radius: 50%;
+    }
+
+    nav .left .up {
+        gap: 20px;
+    }
+
+    nav {
+        width: 10%;
+    }
+
+    .grid__system .header .right .icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .grid__system {
+        margin-left: 11%;
+    }
+}
